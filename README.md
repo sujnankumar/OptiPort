@@ -58,8 +58,8 @@ List the technologies and libraries/frameworks used in your project.
 
 Include screenshots or images that showcase your project's user interface or functionality.
 
-![Screenshot 1](/screenshots/screenshot1.png)
-![Screenshot 2](/screenshots/screenshot2.png)
+![Screenshot 1](/screenshots/1.png)
+![Screenshot 2](/screenshots/2.png)
 
 ## License
 
