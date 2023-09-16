@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}" />
+    <title>Optimization Result</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>OPTIMATION RESULT</h1>
+    </div><br>
+    <div class="container">
+        <h1>Portfolio Allocation</h1>
+        <span>
+            <h3>Total Portfolio Value = {% if total_portfolio_value
+                %}₹{{total_portfolio_value}}{% endif %}</h3>
+        </span>
+        <span>
+            <h3>Leftover Value = ₹{{ leftover | round(2)}}</h3>
+        </span>
+        <table class="table-bordered styled-table">
+            <thead>
+                <tr>
+                    <th>Stock Ticker</th>
+                    <th>Number of Stocks</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in all_stocks %}
+                <tr>
+                    <td>{{ stock[0] }}</td>
+                    <td>{{ stock[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div><br>
+
+    <div class="container">
+        <h1>Portfolio Weights Pie Chart</h1>
+        {% if plot_image %}
+        <h2>Plot:</h2>
+        <img id="plot" src="data:image/png;base64,{{ plot_image }}" alt="Plot">
+        {% endif %}
+    </div><br>
+
+</body>
+
+</html>

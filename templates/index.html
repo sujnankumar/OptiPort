@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}" />
+    <title>Portfolio Optimization</title>
+
+
+    <script>
+        function updateSliderValue(sliderId, displayId) {
+            var slider = document.getElementById(sliderId);
+            var display = document.getElementById(displayId);
+            display.textContent = slider.value + "%";
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 style="color: #0563bb;">PORTFOLIO OPTIMIZATOIN</h1>
+        <form action="/add_stock" method="POST">
+            <table class="styled-table1 table-bordered table">
+                <caption>
+                    <h2>Add Stock</h2>
+                </caption>
+                <thead>
+                    <th>Stock Ticker</th>
+                    <th>View</th>
+                    <th>Confidence</th>
+                </thead>
+                <tr>
+                    <td> <input type="text" name="stock_ticker" placeholder="Enter Stock Ticker" required>
+                    </td>
+                    <td> <input type="number" name="view" placeholder="Enter View" step="0.01" required>
+                    </td>
+                    <td> <input type="range" id="confidence" name="confidence" min="0" max="100" step="5" required
+                            onchange="updateSliderValue('confidence', 'confidenceValue')"><span>&nbsp</span><span
+                            id="confidenceValue">50%</span>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <button class="button1" type="submit">Add</button>
+
+        </form>
+    </div>
+    <br>
+    <div class="container">
+
+        <h2>Stock Data</h2>
+        <table class="styled-table">
+            <thead>
+                <th>Stock Ticker</th>
+                <th>View</th>
+                <th>Confidence</th>
+                <th>Action</th>
+            </thead>
+            {% for stock, data in stock_data.items() %}
+            <tr>
+                <td>{{ stock }}</td>
+                <td>{{ data.view }}</td>
+                <td>{{ data.confidence }}</td>
+                <td><a href="/remove_stock/{{ stock }}">Remove</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <form action="/optimize" method="POST">
+            <label for="total_portfolio_value">Total Portfolio Value:</label>
+            <input style="width: 25vh;height: 4vh;" type="number" id="total_portfolio_value"
+                name="total_portfolio_value" step="1" required><br><br>
+
+            <button type="submit">Optimize</button>
+        </form>
+    </div>
+</body>
+
+</html>
