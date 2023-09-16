@@ -57,8 +57,10 @@ List the technologies and libraries/frameworks used in your project.
 ## Screenshots
 
 Include screenshots or images that showcase your project's user interface or functionality.
-
+### Page 1
 ![Screenshot 1](/screenshots/1.png)
+
+### Page 2
 ![Screenshot 2](/screenshots/2.png)
 
 ## License
