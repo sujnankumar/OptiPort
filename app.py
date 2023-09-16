@@ -135,7 +135,7 @@ def optimize():
     name=list(weight.keys())
     amount=[a*total_portfolio_value for a in amounts]
     da = DiscreteAllocation(weights, prices.iloc[-1], total_portfolio_value=total_portfolio_value)
-    alloc, leftover = da.lp_portfolio()
+    alloc, leftover = da.greedy_portfolio()
 
     plot_image=generate_plot(amount,[stock for stock in name])    
     all_stocks = [(value1[:-3], value2) for index, (value1, value2) in enumerate(zip(list(alloc.keys()), list(alloc.values())))]
@@ -143,4 +143,4 @@ def optimize():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)

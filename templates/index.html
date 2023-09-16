@@ -20,7 +20,7 @@
 <body>
 
     <div class="container">
-        <h1 style="color: #0563bb;">PORTFOLIO OPTIMIZATOIN</h1>
+        <h1 style="color: #0563bb;">PORTFOLIO OPTIMIZATION</h1>
         <form action="/add_stock" method="POST">
             <table class="styled-table1 table-bordered table">
                 <caption>
@@ -36,7 +36,7 @@
                     </td>
                     <td> <input type="number" name="view" placeholder="Enter View" step="0.01" required>
                     </td>
-                    <td> <input type="range" id="confidence" name="confidence" min="0" max="100" step="5" required
+                    <td> <input type="range" id="confidence" name="confidence" min="0.5" max="100" step="5" required
                             onchange="updateSliderValue('confidence', 'confidenceValue')"><span>&nbsp</span><span
                             id="confidenceValue">50%</span>
                     </td>
@@ -48,7 +48,7 @@
         </form>
     </div>
     <br>
-    <div class="container">
+    <div class="container" style="overflow-y: scroll;">
 
         <h2>Stock Data</h2>
         <table class="styled-table">
