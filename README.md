@@ -15,15 +15,15 @@ This project has been deployed using Azure App Service for hosting the web appli
 
 ### Azure App Service
 
-The Stockaroo web application is hosted on Azure App Service, a fully managed platform for building, deploying, and scaling web apps. Azure App Service offers high availability, automatic scaling, and easy integration with Azure services.
+The PortFolioX web application is hosted on Azure App Service, a fully managed platform for building, deploying, and scaling web apps. Azure App Service offers high availability, automatic scaling, and easy integration with Azure services.
 
 ### Azure Container Registry
 
-Azure Container Registry is used to store and manage Docker container images for the Stockaroo application. Docker containers make it easy to package the application and its dependencies, ensuring consistency and portability across different environments.
+Azure Container Registry is used to store and manage Docker container images for the PortFolioX application. Docker containers make it easy to package the application and its dependencies, ensuring consistency and portability across different environments.
 
 ## Getting Started
 
-To get started with Stockaroo, follow these steps:
+To get started with PortFolioX, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Install the necessary dependencies using `pip install -r requirements.txt`.
