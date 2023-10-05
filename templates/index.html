@@ -18,9 +18,13 @@
 </head>
 
 <body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#help">Help</a>
+    </div>
 
-    <div class="container">
-        <h1 style="color: #0563bb;">PORTFOLIO OPTIMIZATION</h1>
+    <div id="#home" class="container">
+        <h1 style="color: #04AA6D;">PORTFOLIO OPTIMIZATION</h1>
         <form action="/add_stock" method="POST">
             <table class="styled-table1 table-bordered table">
                 <caption>
@@ -76,6 +80,79 @@
             <button type="submit">Optimize</button>
         </form>
     </div>
+    <br>
+    <div id="help" class="container" style="text-align: left;">
+        <h1 style="text-align: center;"> How to Use OptiPort: Portfolio Optimization App </h1>
+        <p>OptiPort is a user-friendly web application designed to help you optimize your investment portfolio for
+            maximum returns or minimum risk. Follow these steps to make the most out of OptiPort: </p>
+        <h2>1. Set Your Total Portfolio Value </h2>
+        <p>When you first enter the application, you'll be prompted to set your total portfolio value. This represents
+            the total amount you want to invest. Enter this value in the designated input field and click "Set Total
+            Portfolio Value." </p>
+        <h2>2. Add Stocks to Your Portfolio </h2>
+        <div style="margin-left: 25px;">
+            <h3>Adding a Stock:</h3>
+            <p>
+            <ol>
+                <li><span class="bold">Ticker:</span> Enter the stock ticker symbol for the stock you want to add to
+                    your
+                    portfolio. For
+                    example, if you want to add Tata Motors Ltd, enter "TATAMOTORS" or if you want to add Reliance
+                    Industries Ltd, enter "RELIANCE"
+                </li>
+                <li><span class="bold">View:</span> Set your view on this stock. Views represent your expectation for
+                    the
+                    future return of the stock.
+                    Use the range slider to adjust your view from 0 to 100.
+                </li>
+                <li><span class="bold">Confidence:</span> Set your confidence level in your view. Confidence represents
+                    your
+                    belief in the accuracy of
+                    your view. Use the range slider to set your confidence level from 0 to 100.</li>
+                <li>Click <span class="bold">"Add Stock"</span> to add the stock to your portfolio.</li>
+            </ol>
+            </p>
+            <h3>Removing a Stock: </h3>
+            <p>If you want to remove a stock from your portfolio, click the "Remove" button next to the respective
+                stock.
+            </p>
+        </div>
+
+        <h2>3. Optimize Your Portfolio</h2>
+        <p>Once you have added stocks to your portfolio, click the "Optimize" button to optimize your portfolio
+            based on
+            your views and confidences. OptiPort will calculate the optimal allocation for each stock in your
+            portfolio.
+        </p>
+        <h2>4. View Optimization Results</h2>
+        <p>After optimization, you'll see the following information:
+
+        <ol>
+            <li><span class="bold">Optimized Weights:</span> These are the calculated weights for each stock in your
+                portfolio. These weights
+                represent the portion of your total portfolio value allocated to each stock.</li>
+            <li><span class="bold">Allocation Table:</span> This table shows the number of shares allocated for each
+                stock based on your total
+                portfolio value.</li>
+            <li><span class="bold">Leftover Funds:</span> This represents the remaining amount from your total
+                portfolio
+                value after the
+                optimization.</li>
+        </ol>
+        </p>
+        <h2>5. Explore Pie Chart (Optional)</h2>
+        <p>A pie chart representing your optimized portfolio allocation will be displayed. Each segment of the pie
+            chart
+            represents the percentage of your total portfolio value allocated to a specific stock.</p>
+        <hr>
+        <p>Note: Always review your portfolio allocation carefully before making any investment decisions. OptiPort
+            provides optimization suggestions based on the information you provide, but it's essential to validate
+            these
+            suggestions according to your financial goals and risk tolerance.</p>
+        <p>Enjoy optimizing your investment portfolio with OptiPort!</p>
+
+    </div>
+
 </body>
 
 </html>
