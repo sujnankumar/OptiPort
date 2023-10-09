@@ -1,4 +1,4 @@
-# PortFolioX
+# OptiPort
 
 Brief description of your project. Explain what it does and why it's useful.
 
@@ -15,7 +15,7 @@ This project has been deployed using Azure App Service for hosting the web appli
 
 ### Azure App Service
 
-The PortFolioX web application is hosted on Azure App Service, a fully managed platform for building, deploying, and scaling web apps. Azure App Service offers high availability, automatic scaling, and easy integration with Azure services.
+The OptiPort web application is hosted on Azure App Service, a fully managed platform for building, deploying, and scaling web apps. Azure App Service offers high availability, automatic scaling, and easy integration with Azure services.
 
 ### Azure Container Registry
 
