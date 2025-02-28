@@ -23,7 +23,7 @@ def add_stock():
     global stock_data
     stock = request.form.get('stock_ticker')
     view = float(request.form.get('view'))
-    confidence = int(request.form.get('confidence'))
+    confidence = float(request.form.get('confidence'))
     if stock not in stock_data:
         stock_data[stock] = {
             'view': view,
@@ -91,6 +91,7 @@ def optimize():
         tickers.append(ticker.upper()+".NS")
 
     ohlc = yf.download(tickers, period="max")
+    print(ohlc)
     prices = ohlc["Adj Close"]
     prices.tail()
 
